@@ -189,3 +189,32 @@ iframe, .map-container {
   padding: 0 !important;
   display: block;
 }
+/* === remover espaço extra após SOBRE === */
+#sobre {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* container padrão muito grande — reduzir apenas no SOBRE */
+#sobre .container {
+  padding-bottom: 0 !important;
+}
+
+/* grid do SOBRE sem margem inferior */
+.about-grid {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* mapa com zero de margem/padding */
+iframe {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+/* Ajustar espaço entre SOBRE e SERVIÇOS */
+#servicos {
+  margin-top: 0 !important;
+  padding-top: 10px !important;
+}
