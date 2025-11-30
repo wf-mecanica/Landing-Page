@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WF Mecânica Automotiva – Revisão e Manutenção Premium</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte Premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <img src="logo.png" class="logo" alt="Logo WF Mecânica">
+        <h1>WF Mecânica Automotiva</h1>
+        <p>Excelência, tecnologia e confiança para o seu veículo</p>
+        <a href="#form" class="btn-hero">GANHAR R$ 30 DE DESCONTO</a>
+    </div>
+</header>
+
+<section class="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="grid">
+        <div class="card">Troca de Óleo</div>
+        <div class="card">Injeção Eletrônica</div>
+        <div class="card">Freios</div>
+        <div class="card">Diagnóstico Computadorizado</div>
+        <div class="card">Suspensão</div>
+        <div class="card">Ar-Condicionado</div>
+    </div>
+</section>
+
+<section id="form" class="form-section">
+    <h2>Receba seu Cupom de R$ 30 OFF</h2>
+    <p class="sub">Oferta válida para moradores em até 5 km da oficina.</p>
+
+    <form id="leadForm" class="form">
+        <input type="text" name="nome" placeholder="Seu nome (opcional)">
+        <input type="tel" name="telefone" placeholder="Seu WhatsApp" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+
+        <label class="consent">
+            <input type="checkbox" required>
+            Autorizo a WF Mecânica a enviar comunicações e ofertas. (LGPD)
+        </label>
+
+        <button type="submit" class="btn-enviar">Receber Cupom</button>
+    </form>
+
+    <p id="msg" class="msg"></p>
+</section>
+
+<section class="localizacao">
+    <h2>Localização</h2>
+    <p>Rua da Gasolina, 304 – Petrolândia, Contagem</p>
+    <iframe src="https://www.google.com/maps?q=Rua+da+Gasolina+304+Contagem&output=embed"></iframe>
+</section>
+
+<footer>
+    © 2025 WF Mecânica Automotiva • CNPJ 49.728.613/0001-39
+</footer>
+
+<script>
+document.getElementById("leadForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const msg = document.getElementById("msg");
+    msg.innerHTML = "Enviando dados...";
+
+    const formData = {
+        nome: this.nome.value,
+        telefone: this.telefone.value,
+        email: this.email.value,
+        ip: ""
+    };
+
+    fetch("URL_DO_SEU_SCRIPT_AQUI", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {"Content-Type": "application/json"},
+    })
+    .then(r => r.json())
+    .then(() => {
+        msg.innerHTML = "Cadastro realizado com sucesso! Você receberá seu cupom em instantes.";
+        this.reset();
+    })
+    .catch(() => {
+        msg.innerHTML = "Erro ao enviar dados. Tente novamente.";
+    });
+});
+</script>
+
+</body>
+</html>
