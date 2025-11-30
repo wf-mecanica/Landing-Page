@@ -1,0 +1,147 @@
+:root {
+    --amarelo: #f4c400;
+    --preto: #111;
+    --branco: #fff;
+    --cinza: #f0f0f0;
+    --fonte: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--fonte);
+    margin: 0;
+    background: var(--branco);
+    color: var(--preto);
+}
+
+/* HERO */
+.hero {
+    height: 85vh;
+    background: url('car-background.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay {
+    background: rgba(0,0,0,0.65);
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+}
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: var(--branco);
+    max-width: 600px;
+}
+.logo {
+    width: 160px;
+    margin-bottom: 20px;
+}
+.hero-content h1 {
+    font-size: 38px;
+    font-weight: 800;
+}
+.btn-hero {
+    background: var(--amarelo);
+    padding: 15px 25px;
+    color: var(--preto);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    transition: 0.3s;
+}
+.btn-hero:hover {
+    background: #d9ae00;
+}
+
+/* SERVIÇOS */
+.servicos {
+    padding: 70px 20px;
+    text-align: center;
+}
+.servicos h2 {
+    font-size: 32px;
+    font-weight: 800;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding-top: 20px;
+}
+.card {
+    background: var(--cinza);
+    padding: 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+    background: var(--amarelo);
+}
+
+/* FORMULÁRIO */
+.form-section {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 80px 20px;
+    text-align: center;
+}
+.form {
+    max-width: 450px;
+    margin: auto;
+}
+.form input, .form button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+}
+.form input {
+    background: #222;
+    color: var(--branco);
+    border: 1px solid #444;
+}
+.btn-enviar {
+    background: var(--amarelo);
+    color: var(--preto);
+    font-weight: bold;
+    cursor: pointer;
+}
+.consent {
+    display: flex;
+    font-size: 13px;
+    margin-top: 10px;
+    gap: 8px;
+    align-items: center;
+}
+.msg {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* LOCALIZAÇÃO */
+.localizacao {
+    padding: 60px 20px;
+    text-align: center;
+}
+.localizacao iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--preto);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
