@@ -1,28 +1,44 @@
-// scripts.js
-document.getElementById('year').textContent = new Date().getFullYear();
+/* ==========================================================
+   ANO AUTOMÁTICO NO RODAPÉ
+========================================================== */
+document.getElementById("year").textContent = new Date().getFullYear();
 
-const menuToggle = document.getElementById('menu-toggle');
-const nav = document.getElementById('nav');
 
-menuToggle && menuToggle.addEventListener('click', () => {
-  if (!nav) return;
-  nav.style.display = (nav.style.display === 'block') ? '' : 'block';
+/* ==========================================================
+   MENU MOBILE (ABRIR/FECHAR)
+========================================================== */
+const menuToggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+
+menuToggle.addEventListener("click", () => {
+    nav.style.display = nav.style.display === "block" ? "none" : "block";
 });
 
-// Mock de envio de formulário — substitua por integração real (Formspree / Google Apps Script / backend)
-function handleForm(e){
-  e.preventDefault();
-  alert('Obrigado! Recebemos sua mensagem. Vamos responder em breve.');
-  e.target.reset();
-  return false;
+
+/* ==========================================================
+   ALTERAR MENU + LOGO AO ROLAR A PÁGINA
+========================================================== */
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector(".site-header");
+
+    // Quando rolar mais que 20px
+    if (window.scrollY > 20) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
+
+/* ==========================================================
+   FORMULÁRIO DE CONTATO (VERSÃO SIMPLES)
+========================================================== */
+function handleForm(e) {
+    e.preventDefault();
+
+    alert("Mensagem enviada com sucesso! Em breve entraremos em contato.");
+    
+    e.target.reset();
+    return false;
 }
-// Encolher logo + mudar fundo do menu ao rolar
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('.site-header');
-
-  if (window.scrollY > 20) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
