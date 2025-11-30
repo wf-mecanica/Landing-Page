@@ -29,33 +29,41 @@ body{
 }
 
 /* ==========================================================
-   HEADER + LOGO DINÂMICA
+   HEADER + LOGO DINÂMICA + MENU TRANSPARENTE
 ========================================================== */
+
+/* MENU TRANSPARENTE NO TOPO */
 .site-header{
-  background:rgba(0,0,0,0.85);
-  backdrop-filter:blur(6px);
-  border-bottom:1px solid rgba(255,255,255,0.07);
+  background:transparent;
+  backdrop-filter:none;
+  border-bottom:none;
   position:sticky;
   top:0;
   z-index:100;
-  transition:padding 0.3s ease, background 0.3s ease;
-  padding:15px 0;
+  transition:
+    background 0.35s ease,
+    padding 0.35s ease,
+    border-bottom 0.35s ease;
+  padding:20px 0;
 }
 
+/* MENU ESCURO APÓS ROLAR */
 .site-header.scrolled{
-  padding:5px 0;
-  background:rgba(0,0,0,0.95);
+  background:rgba(0,0,0,0.90);
+  border-bottom:1px solid rgba(255,255,255,0.12);
+  backdrop-filter:blur(8px);
+  padding:8px 0;
 }
 
 /* LOGO MAIOR NO TOPO E MENOR AO ROLAR */
 .logo{
-  height:120px;                 /* tamanho GRANDE */
+  height:120px;   /* TAMANHO NO TOPO */
   width:auto;
-  transition:height 0.3s ease;
+  transition:height 0.35s ease;
 }
 
 .site-header.scrolled .logo{
-  height:60px;                  /* tamanho após scroll */
+  height:60px;    /* TAMANHO APÓS SCROLL */
 }
 
 .header-inner{
@@ -103,23 +111,28 @@ body{
 }
 
 /* ==========================================================
-   HERO (FUNDO COM IMAGEM)
+   HERO COM IMAGEM DE FUNDO VISÍVEL POR BAIXO DO MENU
 ========================================================== */
 .hero{
-  min-height:480px;
-  background-image:url('fundo-hero.jpg'); /* imagem enviada por você */
+  min-height:520px;
+  background-image:url('fundo-hero.jpg'); /* sua imagem */
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
   display:flex;
   align-items:center;
   position:relative;
+  padding-top:140px; /* espaço para que o conteúdo não esconda a logo grande */
 }
 
 .hero-overlay{
   width:100%;
   padding:100px 0;
-  background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.75));
+  background:linear-gradient(
+      180deg,
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.75)
+  );
 }
 
 .hero-content{
