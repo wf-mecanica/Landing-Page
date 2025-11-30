@@ -141,3 +141,20 @@ h1{
   .menu-toggle{display:block}
   .services-grid{grid-template-columns:1fr}
 }
+/* Remove espaço extra abaixo do SOBRE NÓS */
+#sobre, 
+.about-grid {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+iframe {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ajuste do container para reduzir altura entre seções */
+.container {
+  padding: 25px 0;
+}
