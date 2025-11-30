@@ -28,7 +28,7 @@ body{
   width:calc(100% - 40px);
   max-width:var(--max-width);
   margin:0 auto;
-  padding:40px 0;
+  padding:20px 0;
 }
 
 /* header */
