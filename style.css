@@ -158,3 +158,34 @@ iframe {
 .container {
   padding: 25px 0;
 }
+/* === Corrigir espaçamentos excessivos entre seções === */
+
+/* Reduz padding geral nos containers */
+.container {
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+}
+
+/* Remover margem padrão de títulos e parágrafos após seção “Sobre” */
+#sobre, 
+#sobre h2, 
+#sobre h3, 
+#sobre p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+/* Garantir que o próximo bloco (“Nossos serviços”) fique logo abaixo sem gap extra */
+.services,
+.services > .services-grid {
+  margin-top: 0 !important;
+  padding-top: 20px !important;
+}
+
+/* Se houver iframes ou blocos de mapa, resetar margens/padding */
+iframe, .map-container {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
+}
