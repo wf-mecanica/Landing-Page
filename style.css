@@ -57,9 +57,10 @@ body{
 /* hero */
 .hero{
   min-height:380px;
-  background-image: url('images/hero.jpg');
+  background-image: url('fundo-hero.jpg');
   background-size:cover;
   background-position:center;
+  background-repeat:no-repeat;
   position:relative;
   display:flex;
   align-items:center;
