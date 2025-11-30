@@ -1,164 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WF Mecânica Automotiva</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WF Oficina — Mecânica Automotiva</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="images/logo.png" alt="Logo WF" class="logo" />
+        <span class="brand-text">WF Mecânica Automotiva</span>
+      </a>
 
-    <!-- ============================ HEADER ============================ -->
-    <header class="site-header">
-        <div class="container header-inner">
+      <nav class="main-nav" id="nav">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
 
-            <a href="#" class="brand">
-                <img src="logo-wf.png" alt="Logo WF" class="logo">
-            </a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+        ☰
+      </button>
+    </div>
+  </header>
 
-            <nav class="main-nav" id="nav">
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-
-            <button class="menu-toggle" id="menu-toggle">☰</button>
+  <section id="inicio" class="hero">
+    <div class="hero-overlay">
+      <div class="container hero-content">
+        <p class="kicker">Nosso Trabalho • Cursos</p>
+        <h1>Mecânica Automotiva — Tarde</h1>
+        <p class="lead">Manutenção com transparência, qualidade e confiança.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contato">Agende seu serviço</a>
+          <a class="btn btn-outline" href="https://wa.me/5591999999999" target="_blank">WhatsApp</a>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-
-    <!-- ============================ HERO ============================ -->
-    <section id="inicio" class="hero">
-        <div class="hero-overlay">
-            <div class="container hero-content">
-
-                <p class="kicker">Excelência • Segurança • Confiança</p>
-
-                <h1>Mecânica Automotiva de Verdade</h1>
-
-                <p class="lead">
-                    Serviços profissionais para manter seu carro em perfeito estado, com qualidade e transparência.
-                </p>
-
-                <div class="hero-ctas">
-                    <a href="#contato" class="btn btn-primary">Agendar Serviço</a>
-                    <a href="https://wa.me/55SEUNUMEROAQUI" class="btn btn-outline" target="_blank">
-                        WhatsApp
-                    </a>
-                </div>
-
-            </div>
+  <main>
+    <section id="sobre" class="about container">
+      <div class="about-grid">
+        <div>
+          <h2>Quem somos</h2>
+          <p>A WF Mecânica Automotiva nasceu com o compromisso de oferecer serviços de manutenção veicular com qualidade, transparência e confiança. Equipe qualificada e equipamentos modernos.</p>
         </div>
+        <div>
+          <h3>Localização</h3>
+          <p>Rua Exemplo, 123 — Bairro, Cidade.</p>
+          <h3>Contato</h3>
+          <p>Telefone: (31) 9 9999-9999<br>Email: contato@wfmeccanica.com</p>
+        </div>
+      </div>
     </section>
 
-
-
-    <!-- ============================ SOBRE ============================ -->
-    <section id="sobre" class="container">
-        <h2>Sobre Nós</h2>
-
-        <div class="about-grid">
-            <div>
-                <p>
-                    A WF Mecânica Automotiva oferece serviços completos com foco em qualidade, 
-                    precisão e transparência. Trabalhamos com equipamentos modernos e equipe técnica qualificada.
-                </p>
-            </div>
-
-            <div>
-                <h3>Localização</h3>
-                <p>Rua da Gasolina, 304 – Petrolândia, Contagem</p>
-
-                <h3>Contato</h3>
-                <p>(31) 9 9999-9999<br>contato@wfauto.com</p>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- ============================ SERVIÇOS ============================ -->
     <section id="servicos" class="services container">
-        <h2>Nossos Serviços</h2>
-
-        <div class="services-grid">
-
-            <div class="service-card">
-                <h4>Troca de Óleo</h4>
-                <p>Troca de óleo e filtros com materiais de alta qualidade.</p>
-            </div>
-
-            <div class="service-card">
-                <h4>Freios</h4>
-                <p>Revisão e manutenção completa do sistema de freios.</p>
-            </div>
-
-            <div class="service-card">
-                <h4>Suspensão</h4>
-                <p>Diagnóstico e reparo de suspensão e estabilidade.</p>
-            </div>
-
-        </div>
+      <h2>Nossos serviços</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <h4>Troca de óleo</h4>
+          <p>Troca de óleo e filtro com materiais de qualidade.</p>
+        </article>
+        <article class="service-card">
+          <h4>Freios</h4>
+          <p>Manutenção e revisão completa do sistema de freio.</p>
+        </article>
+        <article class="service-card">
+          <h4>Suspensão</h4>
+          <p>Alinhamento, balanceamento e suspensão.</p>
+        </article>
+      </div>
     </section>
 
-
-
-    <!-- ============================ PROMOÇÃO ============================ -->
-    <section class="promo container">
-        <div class="promo-box">
-            <h3>Promoção Especial</h3>
-            <p>Check-up completo com 20% de desconto. Garanta sua vaga!</p>
-            <a href="#contato" class="btn btn-primary">Quero Aproveitar</a>
-        </div>
+    <section id="promocao" class="promo container">
+      <div class="promo-box">
+        <h3>Promoção do mês</h3>
+        <p>Check-up completo com 20% de desconto — peça já seu horário!</p>
+        <a class="btn btn-primary" href="#contato">Quero aproveitar</a>
+      </div>
     </section>
 
-
-
-    <!-- ============================ CONTATO ============================ -->
     <section id="contato" class="contact container">
-        <h2>Contato</h2>
+      <h2>Contato</h2>
+      <div class="contact-grid">
+        <form class="contact-form" action="#" method="post" onsubmit="return handleForm(event)">
+          <label>Nome<input type="text" name="nome" required></label>
+          <label>Telefone<input type="tel" name="telefone" required></label>
+          <label>E-mail<input type="email" name="email"></label>
+          <label>Mensagem<textarea name="mensagem" rows="4" required></textarea></label>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+            <a class="btn btn-outline" href="https://wa.me/5591999999999" target="_blank">WhatsApp</a>
+          </div>
+        </form>
 
-        <div class="contact-grid">
-
-            <form class="contact-form" onsubmit="return handleForm(event)">
-                <input type="text" name="nome" placeholder="Seu nome" required>
-                <input type="tel" name="telefone" placeholder="Telefone" required>
-                <input type="email" name="email" placeholder="E-mail (opcional)">
-                <textarea name="mensagem" placeholder="Mensagem" rows="4" required></textarea>
-
-                <div class="form-actions">
-                    <button class="btn btn-primary" type="submit">Enviar</button>
-                    <a href="https://wa.me/55SEUNUMEROAQUI" class="btn btn-outline" target="_blank">WhatsApp</a>
-                </div>
-            </form>
-
-            <div>
-                <h3>Endereço</h3>
-                <p>Rua da Gasolina, 304 – Petrolândia, Contagem</p>
-
-                <h3>Horários</h3>
-                <p>Seg a Sex: 08h às 18h</p>
-            </div>
-
+        <div class="contact-info">
+          <h3>Visite-nos</h3>
+          <p>Endereço: Rua Exemplo, 123 — Cidade</p>
+          <p>Horário: Seg — Sex: 08:00 — 18:00</p>
+          <div class="small-cta">
+            <a href="#servicos" class="btn">Ver serviços</a>
+          </div>
         </div>
+      </div>
     </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> WF Mecânica — Todos os direitos reservados</div>
+      <div class="footer-links">
+        <a href="#politica">Política de privacidade</a>
+      </div>
+    </div>
+  </footer>
 
-
-    <!-- ============================ FOOTER ============================ -->
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <div>© <span id="year"></span> WF Mecânica Automotiva</div>
-            <div class="footer-links">
-                <a href="#">Política de Privacidade</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
