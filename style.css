@@ -218,3 +218,14 @@ iframe {
   margin-top: 0 !important;
   padding-top: 10px !important;
 }
+#acompanhamento h2 {
+    margin-bottom: 10px;
+}
+
+#acompanhamento p {
+    margin-bottom: 15px;
+}
+
+#resultadoServico ul li {
+    margin-bottom: 5px;
+}
