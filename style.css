@@ -328,3 +328,33 @@ h1{
     justify-content: center;
     padding: 0 !important;
 }
+/* ÍCONES SOCIAIS — alinhados na barra preta */
+.social-top {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    height: 80px;                 /* mesma altura da barra preta */
+    display: flex;
+    align-items: center;          /* CENTRALIZA VERTICALMENTE */
+    gap: 20px;                    /* ESPAÇAMENTO MAIOR */
+    z-index: 5000;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.85;
+    transition: 0.2s ease;
+}
+
+.social-icon:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.social-top svg {
+    width: 24px;
+    height: 24px;
+    fill: #ffffff;
+}
