@@ -89,23 +89,51 @@
       </div>
     </section>
 
-    <section id="servicos" class="services container">
-      <h2>Nossos serviços</h2>
-      <div class="services-grid">
+   <section id="servicos" class="services container">
+    <h2>Nossos serviços</h2>
+
+    <div class="services-grid">
         <article class="service-card">
-          <h4>Troca de óleo</h4>
-          <p>Troca de óleo e filtro com materiais de qualidade.</p>
+            <h4>Troca de óleo</h4>
+            <p>Troca de óleo e filtro com materiais de qualidade.</p>
         </article>
         <article class="service-card">
-          <h4>Freios</h4>
-          <p>Manutenção e revisão completa do sistema de freio.</p>
+            <h4>Freios</h4>
+            <p>Manutenção e revisão completa do sistema de freio.</p>
         </article>
         <article class="service-card">
-          <h4>Suspensão</h4>
-          <p>Alinhamento, balanceamento e suspensão.</p>
+            <h4>Suspensão</h4>
+            <p>Alinhamento, balanceamento e suspensão.</p>
         </article>
-      </div>
-    </section>
+    </div>
+
+    <!-- ACOMPANHAMENTO AGORA DENTRO DE SERVIÇOS -->
+    <div class="acompanhamento-wrapper">
+        <h2>Acompanhe o Serviço do Seu Veículo</h2>
+        <p>Digite a placa ou o código do atendimento fornecido pela oficina.</p>
+
+        <form id="form-acompanhamento" class="contact-form" onsubmit="return consultarServico(event)">
+            <input type="text" id="codigoOuPlaca" placeholder="Placa (ex: ABC1234) ou Código do Serviço" required>
+            <button class="btn btn-primary" type="submit">Consultar</button>
+        </form>
+
+        <div id="resultadoServico" style="
+            display:none;
+            margin-top:25px;
+            background:#111;
+            padding:20px;
+            border-radius:10px;">
+            
+            <h3>Informações do Veículo</h3>
+            <p><strong>Veículo:</strong> <span id="r-veiculo"></span></p>
+            <p><strong>Status atual:</strong> <span id="r-status"></span></p>
+
+            <h3 style="margin-top:20px;">Etapas do Serviço</h3>
+            <ul id="r-etapas" style="line-height:1.7;"></ul>
+        </div>
+    </div>
+
+</section>
 
     <section id="promocao" class="promo container">
       <div class="promo-box">
