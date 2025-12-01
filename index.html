@@ -110,7 +110,28 @@
       </div>
     </section>
   </main>
+<!-- ============================ ACOMPANHAMENTO DE SERVIÇO ============================ -->
+<section id="acompanhamento" class="container">
+    <h2>Acompanhe o Serviço do Seu Veículo</h2>
+    <p>Digite a placa ou o código do atendimento fornecido pela oficina.</p>
 
+    <form id="form-acompanhamento" class="contact-form" onsubmit="return consultarServico(event)">
+        <input type="text" id="codigoOuPlaca" placeholder="Placa (ex: ABC1234) ou Código do Serviço" required>
+        <button class="btn btn-primary" type="submit">Consultar</button>
+    </form>
+
+    <!-- RESULTADO -->
+    <div id="resultadoServico" style="display:none; margin-top: 25px;
+        background:#111; padding:20px; border-radius:10px;">
+
+        <h3>Informações do Veículo</h3>
+        <p><strong>Veículo:</strong> <span id="r-veiculo"></span></p>
+        <p><strong>Status atual:</strong> <span id="r-status"></span></p>
+
+        <h3 style="margin-top:20px;">Etapas do Serviço</h3>
+        <ul id="r-etapas" style="line-height: 1.7;"></ul>
+    </div>
+</section>
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>© <span id="year"></span> WF Mecânica — Todos os direitos reservados</div>
