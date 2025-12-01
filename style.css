@@ -50,7 +50,7 @@ body{
 
 /* Ajuste da imagem da logo */
 .logo {
-    height: 46px;     /* ajuste fino dentro da barra */
+    height: 35px;     /* ajuste fino dentro da barra */
     width: auto;
     filter: none !important;
 }
