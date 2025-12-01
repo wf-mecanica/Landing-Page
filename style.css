@@ -308,3 +308,33 @@ h1{
     opacity: 1;
     transform: scale(1.15);
 }
+/* ===========================
+   ÍCONES SOCIAIS NO TOPO DIREITO
+=========================== */
+.social-top {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    gap: 14px;
+    z-index: 5000; /* acima de todo o header */
+}
+
+.social-top a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.85;
+    transition: 0.2s ease;
+}
+
+.social-top a:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.social-top svg {
+    width: 22px;
+    height: 22px;
+    fill: #ffffff;
+}
