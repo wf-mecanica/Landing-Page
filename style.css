@@ -358,3 +358,109 @@ h1{
     height: 24px;
     fill: #ffffff;
 }
+/* ===========================
+   MOBILE MELHORADO
+=========================== */
+@media (max-width: 700px) {
+
+    /* HEADER */
+    .site-header {
+        position: absolute;
+        width: 100%;
+    }
+
+    /* LOGO MENOR E ALINHADA */
+    .brand {
+        height: 60px;
+        padding-left: 10px;
+        top: 0;
+        left: 0;
+    }
+
+    .logo {
+        height: 42px;   /* tamanho ideal p/ mobile */
+    }
+
+    /* ÍCONES SOCIAIS NO TOPO DIREITO */
+    .social-top {
+        top: 10px;
+        right: 15px;
+        height: 40px;
+        gap: 12px;
+    }
+
+    .social-top svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* BARRA PRETA — mantém visual limpo e compacto */
+    .main-nav {
+        height: auto;
+        padding: 12px 0;
+        display: none;  /* escondido até abrir o hambúrguer */
+        flex-direction: column;
+        background: rgba(0,0,0,0.95);
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 14px;
+        margin: 0;
+        padding: 10px 0 20px;
+    }
+
+    .main-nav a {
+        font-size: 18px;
+        padding: 8px 6px;
+    }
+
+    /* BOTÃO HAMBÚRGUER */
+    .menu-toggle {
+        display: block !important;
+        position: absolute;
+        right: 10px;
+        top: 16px;
+        font-size: 27px;
+        z-index: 4000;
+    }
+
+    /* HERO MELHORADO PARA CELULAR */
+    .hero {
+        min-height: 380px;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .hero-overlay {
+        padding-top: 140px;
+        padding-bottom: 60px;
+    }
+
+    h1 {
+        font-size: 30px !important;
+    }
+
+    .lead {
+        font-size: 15px;
+    }
+
+    .hero-ctas {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 70%;
+    }
+
+    /* GRID DE SERVIÇOS EM 1 COLUNA */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* SOBRE E CONTATO EM UMA COLUNA */
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
