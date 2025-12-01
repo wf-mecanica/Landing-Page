@@ -464,3 +464,20 @@ h1{
         grid-template-columns: 1fr;
     }
 }
+.acompanhamento-wrapper {
+    margin-top: 35px;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+.acompanhamento-wrapper h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#acompanhamento input {
+    background: #0b0b0b !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+}
