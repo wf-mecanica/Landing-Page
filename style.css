@@ -322,7 +322,7 @@ h1{
 }
 /* Aumentar grossura da barra preta */
 .main-nav {
-    height: 70px;   /* <-- ajuste aqui o tamanho da barra */
+    height: 80px;   /* <-- ajuste aqui o tamanho da barra */
     display: flex;
     align-items: center;
     justify-content: center;
