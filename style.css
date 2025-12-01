@@ -36,19 +36,21 @@ body{
   padding:20px 0;
 }
 
-/* LOGO NO CANTO SUPERIOR ESQUERDO */
+/* Logo encaixada na barra preta */
 .brand {
     position: absolute;
-    top: 15px;
-    left: 20px;
-    z-index: 3000;
+    top: 0;
+    left: 0;
+    height: 60px; /* altura exata da barra preta */
     display: flex;
     align-items: center;
-    gap: 10px;
+    padding-left: 15px; /* distância da esquerda */
+    z-index: 4000;
 }
 
+/* Ajuste da imagem da logo */
 .logo {
-    height: 65px;
+    height: 46px;     /* ajuste fino dentro da barra */
     width: auto;
     filter: none !important;
 }
