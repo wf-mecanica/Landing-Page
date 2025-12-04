@@ -481,3 +481,19 @@ h1{
     background: #0b0b0b !important;
     border: 1px solid rgba(255,255,255,0.08) !important;
 }
+/* Centralizar logo na barra preta */
+.brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: 80px; /* mesma altura da barra */
+    display: flex;
+    align-items: center;
+    z-index: 3000;
+}
+
+.logo {
+    height: 58px; /* ajuste para caber na barra */
+    width: auto;
+}
