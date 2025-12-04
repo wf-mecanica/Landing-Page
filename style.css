@@ -497,3 +497,47 @@ h1{
     height: 58px;            /* cabe dentro da barra de 80px */
     width: auto;
 }
+/* Centralizar o ícone do menu (três traços) na barra preta no mobile */
+@media (max-width: 700px) {
+
+    .menu-toggle {
+        display: block !important;
+        position: absolute;
+        left: 50%;              /* centraliza */
+        transform: translateX(-50%); /* garante centralização perfeita */
+        top: 50%;
+        transform: translate(-50%, -50%); /* centraliza vertical + horizontal */
+        font-size: 28px;
+        z-index: 5000;
+    }
+
+    /* Evitar que a logo ou ícones empurrem o hambúrguer */
+    .brand {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    .social-top {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 12px;
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Barra preta ajustada */
+    .main-nav {
+        display: none;
+    }
+
+    .site-header,
+    .main-nav {
+        height: 60px; /* altura da barra no mobile */
+    }
+}
